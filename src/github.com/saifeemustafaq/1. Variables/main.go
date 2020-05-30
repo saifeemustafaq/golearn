@@ -29,10 +29,18 @@ func main() {
 	fmt.Printf("%v %T\n", n, n)
 
 	var o int = 23 //initialized variable
-	fmt.Printf("%v, %T", o, o)
+	fmt.Printf("%v, %T\n", o, o)
 
 	var p string
 	p = strconv.Itoa(o)
-	fmt.Printf("%v, %T", p, p)
+	fmt.Printf("%v, %T\n", p, p)
+
+	var a bool = false
+	fmt.Printf("%v %T\n", a, a)
+
+	b := 1 == 1
+	c := 1 == 2
+	fmt.Printf("%v %T\n", b, b)
+	fmt.Printf("%v %T\n", c, c)
 
 }
