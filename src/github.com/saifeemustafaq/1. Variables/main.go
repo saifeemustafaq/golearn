@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"strconv"
 )
 
@@ -49,14 +50,34 @@ func main() {
 	fmt.Printf("%v %T\n", d, d)
 
 	//lets do some basic arithmetic operation
-	e := 10
-	g := 3
+	e := 10.654
+	g := 3.543
 
 	fmt.Printf("e = 11, g = 3\n")
 	fmt.Printf("%v e + g\n", e+g)
 	fmt.Printf("%v e - g\n", e-g)
 	fmt.Printf("%v e * g\n", e*g)
 	fmt.Printf("%v e / g\n", e/g)
-	fmt.Printf("%v e %% g\n", e%g) //escape sequence for % in %%
+	fmt.Printf("%v e %% g\n", math.Mod(e, g)) //escape sequence for % in %%
+
+	//type conversions
+
+	var a1 int8 = 5
+	var b1 int16 = 10
+	fmt.Println(int(a1) + int(b1))
+
+	//bit operations
+
+	c1 := 10              //1010
+	d1 := 3               //0011
+	fmt.Println(c1 & d1)  // 0010 = 2
+	fmt.Println(c1 | d1)  // 1011 = 11
+	fmt.Println(c1 ^ d1)  // 1001 = 9
+	fmt.Println(c1 &^ d1) // 1000
+
+	//bit shifting
+	e1 := 8              //2^3
+	fmt.Println(e1 << 3) //2^3 * 2^3 = 2^6
+	fmt.Println(e1 >> 3) //2^3 / 2^3 = 2^0
 
 }
