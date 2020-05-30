@@ -35,12 +35,28 @@ func main() {
 	p = strconv.Itoa(o)
 	fmt.Printf("%v, %T\n", p, p)
 
-	var a bool = false
-	fmt.Printf("%v %T\n", a, a)
+	var a bool = false          //boolean
+	fmt.Printf("%v %T\n", a, a) //boolean
 
-	b := 1 == 1
-	c := 1 == 2
-	fmt.Printf("%v %T\n", b, b)
-	fmt.Printf("%v %T\n", c, c)
+	b := 1 == 1                 //boolean
+	c := 1 == 2                 //boolean
+	fmt.Printf("%v %T\n", b, b) //boolean
+	fmt.Printf("%v %T\n", c, c) //boolean
+
+	//int8 //int16 //int32 /int64
+
+	var d uint16 = 42
+	fmt.Printf("%v %T\n", d, d)
+
+	//lets do some basic arithmetic operation
+	e := 10
+	g := 3
+
+	fmt.Printf("e = 11, g = 3\n")
+	fmt.Printf("%v e + g\n", e+g)
+	fmt.Printf("%v e - g\n", e-g)
+	fmt.Printf("%v e * g\n", e*g)
+	fmt.Printf("%v e / g\n", e/g)
+	fmt.Printf("%v e %% g\n", e%g) //escape sequence for % in %%
 
 }
