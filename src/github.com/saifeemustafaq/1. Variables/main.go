@@ -68,8 +68,9 @@ func main() {
 
 	//bit operations
 
-	c1 := 10              //1010
-	d1 := 3               //0011
+	c1 := 10 //1010
+	d1 := 3  //0011
+
 	fmt.Println(c1 & d1)  // 0010 = 2
 	fmt.Println(c1 | d1)  // 1011 = 11
 	fmt.Println(c1 ^ d1)  // 1001 = 9
@@ -80,4 +81,19 @@ func main() {
 	fmt.Println(e1 << 3) //2^3 * 2^3 = 2^6
 	fmt.Println(e1 >> 3) //2^3 / 2^3 = 2^0
 
+	f1 := 3.14
+	f1 = 13.7e72
+	f1 = 2.1E14
+
+	fmt.Printf("%v %T", f1, f1)
+
+	//complex number
+	g1 := 1 + 2i
+	h1 := 2 + 5.2i
+
+	fmt.Printf("g1 = 1 + 2i AND h1 = 2 + 5.2i\n")
+	fmt.Printf("%v g1 + h1\n", g1+h1)
+	fmt.Printf("%v g1 - h1\n", g1-h1)
+	fmt.Printf("%v g1 * h1\n", g1*h1)
+	fmt.Printf("%v g1 / h1\n", g1/h1)
 }
